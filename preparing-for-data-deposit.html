@@ -1,0 +1,980 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Key principle: Computational empathy &#8212; AEA Guidance</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'preparing-for-data-deposit';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Protocol for Third-party Verifications" href="protocol-3rd-party-replication.html" />
+    <link rel="prev" title="Unofficial guidance on various topics by the AEA Data Editor" href="overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">AEA Guidance</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Licensing_guidance.html">Some guidance on licensing of databases and software:</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="creating-restricted-data-deposit-icpsr.html">Preliminaries</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="creating-separate-data-deposit.html">Who should read this</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="data-deposit-aea.html">Tutorial</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Citing, DOI</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="guidelines-other-repositories.html">Why deposit at a different repository</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Unofficial guidance on various topics by the AEA Data Editor</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Key principle: Computational empathy</a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="protocol-3rd-party-replication.html">Protocol for Third-party Verifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replication-comment.html">Provide a strong link to the original replication package</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="reproducibility-checks.html">Generic guidance</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="sample-report-3rd-1.html">Code Verification - Restricted Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample-report.html">README file</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="sharing-openicpsr.html">Enabling sharing</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="sharing-restricted-data.html">DO’s and DON’Ts</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="template-ipums-api-beta.html">Template to be sent to a author for IPUMS-USA API trial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="third-party-request.html">Template to be sent to a third-party replication service</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpreparing-for-data-deposit.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/preparing-for-data-deposit.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Key principle: Computational empathy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Key principle: Computational empathy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#describing-the-contents-of-your-replication-package">Describing the contents of your replication package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-citations">Data Citations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-cite">What to cite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-cite">Where to cite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-citations-and-data-availability-statements">Data citations and Data Availability Statements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-include">Code to include</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-include">How to include</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-manual-modifications">No manual modifications</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structure-of-a-replication-package">Data structure of a replication package</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-in-the-presence-of-more-than-1-000-files">Structure in the presence of more than 1,000 files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-in-the-presence-of-confidential-unpublished-data">Structure in the presence of confidential (unpublished) data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-separate-data-deposit">Creating a separate data deposit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#considering-the-replicator">Considering the replicator</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-a-license">Choosing a license</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#re-run-your-replication-package">Re-run your replication package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-to-upload">Preparing to upload</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#final-checklist">Final checklist</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assistance">Assistance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#next-step">Next step</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>This document describes how to best <strong>prepare a replication package</strong> for an AEA journal. Much of the guidance here
+is not specific to our journals - the document links to other websites for tutorials, best practices, etc. The best moment to do the preparation described here is, in fact, when you start the project, not once you have had your manuscript conditionally accepted. However, all steps here can and have been successfully performed at the point of conditional acceptance.</p>
+<blockquote>
+<div><p><img alt="Link to DCAS Icon" src="https://datacodestandard.org/assets/img/DCAS-1.0.png" />
+The Data Editor of the American Economic Association endorses DCAS,
+the <a class="reference external" href="https://datacodestandard.org/">Data and Code Availability Standard v1.0</a>. The AEA’s data and code availability policy is
+compatible with DCAS.</p>
+</div></blockquote>
+<section id="key-principle-computational-empathy">
+<h1>Key principle: Computational empathy<a class="headerlink" href="#key-principle-computational-empathy" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><ul class="simple">
+<li><p>Keep in mind: The replication package is meant to be run by others, who have none of the setup, packages, and data that the original author might have, on computers that may not run the same operating system.</p></li>
+<li><p>Treat the replication package as one of the methods to convey the methods that lead to your manuscript’s conclusions. Consider it a teaching tool, targeting young graduate students who may not be in your field.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="describing-the-contents-of-your-replication-package">
+<h1>Describing the contents of your replication package<a class="headerlink" href="#describing-the-contents-of-your-replication-package" title="Link to this heading">#</a></h1>
+<p>Every replication package requires a document outlining where the data comes from, what data is provided, what requirements are needed to run the code in the replication package, how to run the code, what results to expect, and where to find the results. This is conventionally called the “README”.</p>
+<ul class="simple">
+<li><p>The AEA requires that the README contain a number of information elements.  A convenient way to ensure that these elements are present is to use the <a class="reference external" href="https://social-science-data-editors.github.io/template_README/">template README for social science replication packages</a>; however, you are free to provide this information in a format of your choice as well.</p></li>
+</ul>
+<p><img alt="template README" src="images/template-readme-700x433.png" /></p>
+<p>The following information is required in the README (unless a modifier indicates otherwise):</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Data Availability and Provenance Statements</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Statement about Rights</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> License for Data (optional, but recommended)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Details on each Data Source</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Dataset list</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Computational requirements</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Software Requirements</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Controlled Randomness (as necessary)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Memory, Runtime, and Storage Requirements</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Description of programs/code</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> License for Code (Optional, but recommended)</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Instructions to Replicators</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Details (as necessary)</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> List of tables and programs</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> References (Optional, but recommended)</p></li>
+</ul>
+<p>Some more information is provided below, a full discussion is available at the <a class="reference external" href="https://social-science-data-editors.github.io/template_README/">template README for social science replication packages</a>.</p>
+<p>The README should be in a format that is easily readable online, such as a PDF or a TXT file. You can provide a Word or LaTeX source for the README as well, but that is not required.</p>
+<p>Provide the README as part of your replication package, ideally in the root directory.</p>
+</section>
+<section id="data-citations">
+<h1>Data Citations<a class="headerlink" href="#data-citations" title="Link to this heading">#</a></h1>
+<p>All manuscripts will be checked for data citations. If you have not done so, now is the time to add them to your
+manuscript.</p>
+<section id="what-to-cite">
+<h2>What to cite<a class="headerlink" href="#what-to-cite" title="Link to this heading">#</a></h2>
+<p>All datasets actively used in your replication package that are not your own must be cited. Just as with any other literature, this serves to properly identify the provenance of the information you use, and attribution of credit to the original creator. Data you created should also be cited, either by pointing to a data deposit you made elsewhere, or by pointing to your own (forthcoming) data deposit at the AEA.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.aeaweb.org/journals/policies/sample-references">AEA Sample References</a></p></li>
+<li><p><a class="reference external" href="https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html">Guidance for data citations</a></p></li>
+<li><p><a class="reference internal" href="#data-deposit-aea.html#citing-your-deposit"><span class="xref myst">Guidance on how to cite the data you collected</span></a></p></li>
+<li><p><a class="reference internal" href="#/posts/2021-03-31-what-data"><span class="xref myst">Some additional considerations</span></a></p></li>
+</ul>
+</section>
+<section id="where-to-cite">
+<h2>Where to cite<a class="headerlink" href="#where-to-cite" title="Link to this heading">#</a></h2>
+<p>Every citation has an in-text entry (<code class="docutils literal notranslate"><span class="pre">Smith</span> <span class="pre">(2020)</span></code> or <code class="docutils literal notranslate"><span class="pre">(Smith,</span> <span class="pre">2020)</span></code>), and a list entry in the Reference section (see the <a class="reference external" href="https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-2.html">Chicago Manual of Style Quick Guide</a>). This is true for data citations as well.</p>
+<ul class="simple">
+<li><p>Your data citations should be listed in the <strong>Reference section</strong> of the <strong>manuscript</strong>.</p></li>
+</ul>
+<p>In rare circumstances, when there are too many data citations to accomodate succinctly, data citations for sources can be deferred to an online data appendix. In all cases, for clarity, all data citations should <strong>also</strong> appear in the <a class="reference external" href="https://social-science-data-editors.github.io/template_README/template-README.html">README</a>, including with a separate <a class="reference external" href="https://social-science-data-editors.github.io/template_README/template-README.html#references">Reference section</a>.</p>
+</section>
+<section id="data-citations-and-data-availability-statements">
+<h2>Data citations and Data Availability Statements<a class="headerlink" href="#data-citations-and-data-availability-statements" title="Link to this heading">#</a></h2>
+<p>In many cases, the data citation for a public-use dataset has a unique URL that is sufficient for downloading the dataset:</p>
+<blockquote>
+<div><p>Bureau of Labor Statistics. 2000–2010. “Current Employment Statistics: Colorado, Total Nonfarm, Seasonally adjusted - SMS08000000000000001.” <em>United States Department of Labor</em>. <a class="reference external" href="http://data.bls.gov/cgi-bin/surveymost?sm+08">http://data.bls.gov/cgi-bin/surveymost?sm+08</a> (accessed February 9, 2011).</p>
+</div></blockquote>
+<p>However, in many other cases where the URL does not lead directly to the dataset, a separate “Data Availability Statement” needs to be provided, as part of the README. A simple data citation is not sufficient. See <a class="reference external" href="https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html">general guidance on data availability statements</a>, and <a class="reference external" href="https://social-science-data-editors.github.io/template_README/template-README.html#data-availability-and-provenance-statements">some examples in the template README</a>.</p>
+</section>
+</section>
+<section id="code">
+<h1>Code<a class="headerlink" href="#code" title="Link to this heading">#</a></h1>
+<p>It should be obvious that your replication package should contain all code used to generate the results in your manuscript.</p>
+<section id="code-to-include">
+<h2>Code to include<a class="headerlink" href="#code-to-include" title="Link to this heading">#</a></h2>
+<p>This includes</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> code to read in raw data,</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> code to clean and process data,</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> code to analyze data and estimate models, and</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> code to generate tables and figures.</p></li>
+</ul>
+<p>This applies even to</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> maps and other complex visualizations (<a class="reference external" href="https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html">guidance</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> web scraping code</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> code that processes confidential data (see below)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> code that anonymizes data</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> code that prepares surveys and runs experiments (<a class="reference external" href="https://www.aeaweb.org/journals/data/policy-experimental-surveys">guidance</a>)</p></li>
+</ul>
+<p>In all cases, it is possible that “code” is not a program, but human-readable instructions on how to perform a manipulation.</p>
+<ul class="simple">
+<li><p>For instance, despite the <a class="reference external" href="https://social-science-data-editors.github.io/guidance/guidance-reproducible-gis-analysis.html">availability of scriptable GIS software</a>, many economists prefer to use GUI-based GIS software, and manually construct maps.</p></li>
+<li><p>For instance, many websites providing data have only an interactive process to acquire or request data, and no single download link. In such cases, detailed instructions on how to acquire the data may be necessary (see <a class="reference external" href="https://doi.org/10.5281/zenodo.10983009">https://doi.org/10.5281/zenodo.10983009</a> for an example). We do encourage authors to use APIs where available.</p></li>
+</ul>
+</section>
+<section id="how-to-include">
+<h2>How to include<a class="headerlink" href="#how-to-include" title="Link to this heading">#</a></h2>
+<p>Code should be included in its “native” form, i.e., the format that the software expects to read it in. For instance, Stata code should be in <code class="docutils literal notranslate"><span class="pre">.do</span></code> files, R code in <code class="docutils literal notranslate"><span class="pre">.R</span></code> files, Qualtrics surveys in <code class="docutils literal notranslate"><span class="pre">.qsf</span></code> files, etc.</p>
+</section>
+<section id="no-manual-modifications">
+<h2>No manual modifications<a class="headerlink" href="#no-manual-modifications" title="Link to this heading">#</a></h2>
+<p>The replication package should reproduce the tables and figures, as well as any in-text numbers, by <strong>running code without manual intervention</strong>.</p>
+<blockquote>
+<div><p>The only exception to this rule is a single change to set a small number of program and data directory paths.</p>
+</div></blockquote>
+<p>While running a small number of distinct programs separately  is acceptable (in some cases even desirable), it is <strong>not acceptable</strong> to require replicators to manually enter numbers, or configure parameter files, in order to reproduce the tables and figures in the paper. Nevertheless, it should be clear from the manuscript and the code how a replicator might deviate from the tables and figures in the paper.</p>
+</section>
+</section>
+<section id="data-structure-of-a-replication-package">
+<h1>Data structure of a replication package<a class="headerlink" href="#data-structure-of-a-replication-package" title="Link to this heading">#</a></h1>
+<p>The AEA uses the openICPSR platform for replication packages. The platform allows users to download complete “deposits”, or only subdirectories thereof. However, deposits of replication packages at other trusted repositories are also accepted, as long as they satisfy the requirements described here.</p>
+<blockquote>
+<div><p>Users must not upload ZIP packages as files - rather, ZIP files can be used to structure code and data, but should be unzipped on the platform (“import from ZIP”). The exception is when there are <a class="reference internal" href="#structure-in-the-presence-of-more-than-1000-files"><span class="xref myst">more than 1,000 files in the repository</span></a>.</p>
+</div></blockquote>
+<p>The code and data should run as downloaded from the repository, without further manual modifications (creating empty subdirectories programmatically is acceptable). Because code tends to be small, but data can be large, we strongly advise to not commingle data and code - interested researchers can download  the code directory by itself if they wish, without also downloading a potentially very large data directory.</p>
+<p>A simple template might be</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">README</span><span class="o">.</span><span class="n">pdf</span>
+<span class="n">data</span><span class="o">/</span>
+   <span class="n">raw</span><span class="o">/</span>
+      <span class="n">cps0001</span><span class="o">.</span><span class="n">dat</span>
+   <span class="n">analysis</span><span class="o">/</span>
+      <span class="n">combined_data</span><span class="o">.</span><span class="n">dta</span>
+      <span class="n">combined_data</span><span class="o">.</span><span class="n">csv</span>
+      <span class="n">combined_data_codebook</span><span class="o">.</span><span class="n">pdf</span>
+<span class="n">code</span><span class="o">/</span>
+  <span class="mi">01</span><span class="n">_create</span><span class="o">/</span>
+      <span class="mi">01</span><span class="n">_readcps</span><span class="o">.</span><span class="n">R</span>
+      <span class="mi">02</span><span class="n">_readfred</span><span class="o">.</span><span class="n">R</span>
+  <span class="mi">02</span><span class="n">_analysis</span><span class="o">/</span>
+      <span class="mi">01</span><span class="n">_table1</span><span class="o">-</span><span class="mf">5.</span><span class="n">R</span>
+      <span class="mi">02</span><span class="n">_figures1</span><span class="o">-</span><span class="mf">4.</span><span class="n">R</span>
+<span class="n">results</span><span class="o">/</span>
+  <span class="n">table1</span><span class="o">.</span><span class="n">tex</span>
+  <span class="n">table2</span><span class="o">.</span><span class="n">tex</span>
+  <span class="o">...</span>
+  <span class="n">figure1</span><span class="o">.</span><span class="n">pdf</span>
+  <span class="n">figure2</span><span class="o">.</span><span class="n">pdf</span>
+</pre></div>
+</div>
+<section id="structure-in-the-presence-of-more-than-1-000-files">
+<h2>Structure in the presence of more than 1,000 files<a class="headerlink" href="#structure-in-the-presence-of-more-than-1-000-files" title="Link to this heading">#</a></h2>
+<p>ICPSR cannot accept deposits with more than 1,000 files. Therefore, we relax the rule that all data and code must be unzipped, though we still insist on the “smallest possible configuration”.</p>
+<p>In most cases, it is a particular directory that is the primary culprit. Say you have</p>
+<p><code class="docutils literal notranslate"><span class="pre">Structure-pre:</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">code</span><span class="p">:</span> <span class="mi">20</span> <span class="n">files</span>
+<span class="o">/</span><span class="n">data</span><span class="o">/</span>
+   <span class="n">src1</span><span class="o">/</span><span class="p">:</span> <span class="mi">25</span> <span class="n">files</span>
+   <span class="n">src2</span><span class="o">/</span><span class="p">:</span> <span class="mi">101</span> <span class="n">files</span>
+   <span class="n">src3</span><span class="o">/</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="mi">000</span> <span class="n">files</span>
+</pre></div>
+</div>
+<p>then the ideal structure, taking into account the 1,000 file limit, would be:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Structure-post:</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">code</span><span class="p">:</span> <span class="mi">20</span> <span class="n">files</span>
+<span class="o">/</span><span class="n">data</span><span class="o">/</span>
+   <span class="n">src1</span><span class="o">/</span><span class="p">:</span> <span class="mi">25</span> <span class="n">files</span>
+   <span class="n">src2</span><span class="o">/</span><span class="p">:</span> <span class="mi">101</span> <span class="n">files</span>
+   <span class="n">src3</span><span class="o">.</span><span class="n">zip</span><span class="p">:</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">file</span><span class="p">,</span> <span class="n">containing</span> <span class="mi">3</span><span class="p">,</span><span class="mi">000</span> <span class="n">files</span>
+</pre></div>
+</div>
+<p>(src3/ and its 3,000 files have been removed!)</p>
+<p>Your README should provide instructions to the replicators how to recover the fully unzipped structure (there are cross-platform differences in unzipping, so be precise about the final structure, rather than the method of getting there).</p>
+<p>Alternatively, the code can handle the unzipping - optional, but more robust.</p>
+<p>Once you’ve adjusted that, zip up the whole structure (so a ZIP file that has inside it another zip file, plus the <code class="docutils literal notranslate"><span class="pre">/code</span></code>, <code class="docutils literal notranslate"><span class="pre">/data/src1/</span></code>, and <code class="docutils literal notranslate"><span class="pre">/data/src2/</span></code> directories), and “Import from ZIP” when uploading to ICPSR.</p>
+<ul class="simple">
+<li><p>See also <a class="reference external" href="https://aeadataeditor.github.io/aea-de-guidance/FAQ.html#i-am-trying-to-upload-to-the-repository-but-my-replication-package-has-more-than-1000-files">a similar entry to our FAQ</a>.</p></li>
+</ul>
+</section>
+<section id="structure-in-the-presence-of-confidential-unpublished-data">
+<h2>Structure in the presence of confidential (unpublished) data<a class="headerlink" href="#structure-in-the-presence-of-confidential-unpublished-data" title="Link to this heading">#</a></h2>
+<p>When the replication package relies on confidential data that cannot be shared, or is shared under different conditions, authors will have to</p>
+<ul class="simple">
+<li><p>prepare a confidential (partial) replication package</p>
+<ul>
+<li><p>this would contain the contents of <code class="docutils literal notranslate"><span class="pre">data/confidential</span></code> and possibly <code class="docutils literal notranslate"><span class="pre">data/conf_analysis</span></code> from the example below.</p></li>
+</ul>
+</li>
+<li><p>preserve (archive) the confidential replication package</p>
+<ul>
+<li><p>If the data cannot be removed from a secure enclave, they should nevertheless be archived wherever the confidential data are kept (see <a class="reference external" href="https://social-science-data-editors.github.io/guidance/FAQ.html#how-can-i-ensure-that-the-confidential-data-is-preserved">this FAQ</a>)</p></li>
+<li><p>If the data can be shared, but are subject to access restrictions, follow  <a class="reference internal" href="creating-separate-data-deposit.html"><span class="doc std std-doc">this guide on creating a separate data deposit</span></a> and, when creating the restricted deposit at ICPSR, follow <a class="reference internal" href="creating-restricted-data-deposit-icpsr.html"><span class="doc std std-doc">these instructions on how to do so</span></a>.</p></li>
+</ul>
+</li>
+<li><p>prepare a non-confidential replication package that contains all code, and any data that is not subject to publication controls</p>
+<ul>
+<li><p>this would contain the contents of <code class="docutils literal notranslate"><span class="pre">data/raw</span></code>, <code class="docutils literal notranslate"><span class="pre">data/analysis</span></code>, <code class="docutils literal notranslate"><span class="pre">code/</span></code>, and for reference, <code class="docutils literal notranslate"><span class="pre">results/</span></code> from the example below.</p></li>
+</ul>
+</li>
+<li><p>ensure that replicators have detailed instructions on how to combine the two packages</p></li>
+<li><p>specify  which (if any) of the results in their paper can be reproduced without the confidential data.</p></li>
+</ul>
+<p>Clearly separate the restricted from the open-access data, both in terms of the raw data as well as the processed data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">/</span>
+   <span class="n">raw</span><span class="o">/</span>
+      <span class="n">cps0001</span><span class="o">.</span><span class="n">dat</span>
+   <span class="n">confidential</span><span class="o">/</span>
+      <span class="n">ssa</span><span class="o">.</span><span class="n">csv</span>
+   <span class="n">conf_analysis</span><span class="o">/</span>
+      <span class="n">confidential_combined</span><span class="o">.</span><span class="n">dta</span>
+</pre></div>
+</div>
+<p>Keep in mind that you may be able to provide a subset of your replication package privately to the AEA Data Editor, see  the <a class="reference internal" href="sharing-restricted-data.html"><span class="doc std std-doc">Sharing restricted-access data with the AEA Data Editor</span></a> page, or that you might be able to <a class="reference internal" href="creating-separate-data-deposit.html"><span class="doc std std-doc">create a separate data deposit</span></a> with a more <a class="reference internal" href="Licensing_guidance.html"><span class="doc std std-doc">limited license</span></a>.</p>
+<p>Authors might want to investigate the  possibility of providing “fake” or “simulated” data that might allow replicators to run code, without necessarily obtaining meaningful results (functionality test).</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="sharing-restricted-data.html"><span class="doc std std-doc">Sharing restricted-access data with the AEA Data Editor</span></a></p></li>
+<li><p><a class="reference internal" href="Licensing_guidance.html"><span class="doc std std-doc">Licensing guidance</span></a>.</p></li>
+<li><p>The <a class="reference external" href="https://social-science-data-editors.github.io/guidance/FAQ.html#i-use-confidential-data-i-am-allowed-to-provide-the-data-to-the-data-editor-for-the-purpose-of-replication-but-you-are-not-allowed-to-publish-the-data-how-do-i-proceed">Social Science Editors’ FAQ</a> describes a related issue.</p></li>
+</ul>
+</section>
+<section id="creating-a-separate-data-deposit">
+<h2>Creating a separate data deposit<a class="headerlink" href="#creating-a-separate-data-deposit" title="Link to this heading">#</a></h2>
+<p>In situations where the data has a different license, or where the data you include has value separately from your replication package, you can create a separate data deposit, and link it/reference it/cite it.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="creating-separate-data-deposit.html"><span class="doc std std-doc">Creating a separate data deposit</span></a></p></li>
+<li><p><a class="reference internal" href="guidelines-other-repositories.html"><span class="doc std std-doc">Guidelines for depositing at other repositories</span></a></p></li>
+<li><p><a class="reference external" href="https://www.aeaweb.org/journals/data/faq#psid">Special case: PSID</a></p></li>
+<li><p><a class="reference external" href="https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#challenges-in-hosting-of-data-and-code-at-restricted-access-data-centers">Special case: confidential data</a></p></li>
+</ul>
+</section>
+<section id="considering-the-replicator">
+<h2>Considering the replicator<a class="headerlink" href="#considering-the-replicator" title="Link to this heading">#</a></h2>
+<p>The replicator of your package is likely to be less qualified than you are. After all, you are publishing something novel.</p>
+<p>You should assume</p>
+<ul class="simple">
+<li><p>that the replicator has basic knowledge in how to run your software package, if the software is commonly used in economics</p>
+<ul>
+<li><p>Stata, Matlab, some others are commonly used</p></li>
+<li><p>Compiled or new computer languages are much less likely to be widely used, even if they are used in your subdiscipline</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="software usage" src="images/figure_software_years_pct.png" /></p>
+<p>You can assume</p>
+<ul class="simple">
+<li><p>that the replicator can manipulate a top-level configuration file</p>
+<ul>
+<li><p>for instance, to set a base directory</p></li>
+<li><p>but not setting a base directory at the top of 25 different files</p></li>
+</ul>
+</li>
+</ul>
+<p>You should NOT assume</p>
+<ul class="simple">
+<li><p>that the replicator will use the same type of operating system</p>
+<ul>
+<li><p>describe any <em>hard</em> requirements, but do not impose any <em>fake</em> requirements</p></li>
+<li><p>most Stata, Matlab, SAS, R, Python, etc. can run on any operating system, unless you hard-code platform-specific commands into your code</p></li>
+</ul>
+</li>
+<li><p>that the replicator has any of your packages/modules/etc. installed</p>
+<ul>
+<li><p>provide a setup program to install these (not manual instructions).</p></li>
+<li><p>provide copies of such packages/modules when the package repository does not allow you to specify a version</p></li>
+<li><p>provide a container/ Docker image/ VM that comprises all the necessary software and libraries</p></li>
+</ul>
+</li>
+<li><p>that the replicator will run the software the same way you do</p>
+<ul>
+<li><p>some software can be run in different ways (interactive, batch, etc.) and may behave differently depending on how it s run.</p></li>
+<li><p>For instance, Stata will change the working directory to that of the program being run in batch mode, but not if running interactively</p></li>
+<li><p>For instance, running R code using Rstudio may behave differently than running it with <code class="docutils literal notranslate"><span class="pre">rscript</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>For less frequently used software, provide a URL where the software can be obtained.</p>
+<ul class="simple">
+<li><p>essentially, if not listed in the figure above, provide information on how to obtain software</p></li>
+<li><p>if using commercial compilers, we also suggest to compile your code using open-source or free compilers (including any free performance packages, such as Intel MKL), even if the resulting code is not the most efficient.</p></li>
+<li><p>as of 2021, the AEA Data Editor has access to the software on <a class="reference external" href="https://ciser.cornell.edu/computing/computing-account-software/">this list</a>, and any open-source (free) software that can be installed on Windows, Linux, and macOS.</p></li>
+</ul>
+</section>
+</section>
+<section id="choosing-a-license">
+<h1>Choosing a license<a class="headerlink" href="#choosing-a-license" title="Link to this heading">#</a></h1>
+<p>By default, the openICPSR deposit attributes a <a class="reference external" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Public License</a> to your deposit, but you can choose a different license. If you do, you must add a file called “LICENSE.txt” (by convention capitalized) to the deposit.</p>
+<ul class="simple">
+<li><p>See our <a class="reference internal" href="Licensing_guidance.html"><span class="doc std std-doc">Licensing guidance</span></a> for more details.</p></li>
+</ul>
+</section>
+<section id="re-run-your-replication-package">
+<h1>Re-run your replication package<a class="headerlink" href="#re-run-your-replication-package" title="Link to this heading">#</a></h1>
+<p>Ideally, once you have prepared your replication package, <strong>you should re-run the code again</strong>, in a clean environment, possibly a fresh computer, to ensure that (a) the package is, in fact, reproducible with minimal interaction (b) the results are numerically identical.</p>
+<ul class="simple">
+<li><p>Wherever possible, we strongly encourage running in batch (non-interactive) mode.</p></li>
+</ul>
+</section>
+<section id="preparing-to-upload">
+<h1>Preparing to upload<a class="headerlink" href="#preparing-to-upload" title="Link to this heading">#</a></h1>
+<p>Once you are done preparing your replication package, you should upload it:</p>
+<ul class="simple">
+<li><p>if you have received a conditional acceptance, your replication  package <strong>must</strong> be in a trusted repository. The default trusted repository is the <a class="reference external" href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>. Other trusted repositories may be acceptable (see <a class="reference external" href="https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories">list</a>), but replication packages should meet the <a class="reference internal" href="guidelines-other-repositories.html"><span class="doc std std-doc">display guidelines</span></a>.</p></li>
+<li><p>if you have confidential data that you want to transmit to the AEA Data Editor but do not want published, communicate with the AEA Data Editor directly (see <a class="reference external" href="https://www.aeaweb.org/journals/data/faq#restricted">this FAQ</a> and <a class="reference internal" href="sharing-restricted-data.html"><span class="doc std std-doc">Sharing restricted-access data with the AEA Data Editor</span></a>).</p></li>
+<li><p>if you have received instructions during the revise-and-resubmit process to have a reproducibility check conducted, you may use the AEA Data and Code Repository, but other methods are also acceptable. Do not forget, however, that once the paper is accepted, it <strong>must</strong> be made available on a trusted repository - other methods are then no longer acceptable.</p></li>
+</ul>
+</section>
+<section id="final-checklist">
+<h1>Final checklist<a class="headerlink" href="#final-checklist" title="Link to this heading">#</a></h1>
+<p>Before proceeding, do check:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> you have prepared a README that provides all the relevant information, as per the <a class="reference external" href="https://social-science-data-editors.github.io/template_README/">README template</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> your manuscript includes data citations</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> your data and code deposit contains all code, including code to read in raw data, <em>even when the data cannot be provided</em>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> your replication package has been re-executed, and reproduces the tables and figures in your manuscript faithfully.</p></li>
+</ul>
+</section>
+<section id="assistance">
+<h1>Assistance<a class="headerlink" href="#assistance" title="Link to this heading">#</a></h1>
+<p>If, in the process of preparing your replication package, you have questions that are not addressed by these guidelines, please contact us:</p>
+<ul class="simple">
+<li><p>We are on <a class="reference external" href="https://bsky.app/profile/aeadata.bsky.social">BlueSky</a>, <a class="reference external" href="https://mstdn.social/&#64;aeadata/">Mastodon</a>, and <a class="reference external" href="https://twitter.com/AeaData">Twitter/X</a>.</p></li>
+<li><p>Contact us via the AEA’s <a class="reference external" href="https://www.aeaweb.org/contact">Contact form</a></p></li>
+<li><p>Reach out to the editor handling your paper, who knows how to reach us (but might also have the answer).</p></li>
+<li><p>Reach out to us directly (you know how to find us).</p></li>
+</ul>
+</section>
+<section id="next-step">
+<h1>Next step<a class="headerlink" href="#next-step" title="Link to this heading">#</a></h1>
+<p>If you are ready, you can proceed to <a class="reference internal" href="data-deposit-aea.html"><span class="doc std std-doc">upload to the AEA Data and Code Repository</span></a> (or your chosen alternate trusted repository).</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unofficial guidance on various topics by the AEA Data Editor</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="protocol-3rd-party-replication.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Protocol for Third-party Verifications</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Key principle: Computational empathy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#describing-the-contents-of-your-replication-package">Describing the contents of your replication package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-citations">Data Citations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-cite">What to cite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-cite">Where to cite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-citations-and-data-availability-statements">Data citations and Data Availability Statements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-include">Code to include</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-include">How to include</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-manual-modifications">No manual modifications</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structure-of-a-replication-package">Data structure of a replication package</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-in-the-presence-of-more-than-1-000-files">Structure in the presence of more than 1,000 files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-in-the-presence-of-confidential-unpublished-data">Structure in the presence of confidential (unpublished) data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-separate-data-deposit">Creating a separate data deposit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#considering-the-replicator">Considering the replicator</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-a-license">Choosing a license</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#re-run-your-replication-package">Re-run your replication package</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-to-upload">Preparing to upload</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#final-checklist">Final checklist</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assistance">Assistance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#next-step">Next step</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Social Science Data Editors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>DO’s and DON’Ts &#8212; AEA Guidance</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sharing-restricted-data';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="step-by-step.html" />
+    <link rel="prev" title="Enabling sharing" href="sharing-openicpsr.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">AEA Guidance</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Licensing_guidance.html">Some guidance on licensing of databases and software:</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="creating-restricted-data-deposit-icpsr.html">Preliminaries</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="creating-separate-data-deposit.html">Who should read this</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="data-deposit-aea.html">Tutorial</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Citing, DOI</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="guidelines-other-repositories.html">Why deposit at a different repository</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Unofficial guidance on various topics by the AEA Data Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparing-for-data-deposit.html">Key principle: Computational empathy</a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="protocol-3rd-party-replication.html">Protocol for Third-party Verifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replication-comment.html">Provide a strong link to the original replication package</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="reproducibility-checks.html">Generic guidance</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="sample-report-3rd-1.html">Code Verification - Restricted Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample-report.html">README file</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="sharing-openicpsr.html">Enabling sharing</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">DO’s and DON’Ts</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="template-ipums-api-beta.html">Template to be sent to a author for IPUMS-USA API trial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="third-party-request.html">Template to be sent to a third-party replication service</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsharing-restricted-data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/sharing-restricted-data.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>DO’s and DON’Ts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">DO’s and DON’Ts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#permissions">Permissions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-restrictions-and-instructions">Documenting restrictions and instructions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#signaling-availability">Signaling availability</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-data-with-data-editor">Sharing data with Data Editor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preferred-contractual-arrangement">Preferred contractual arrangement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preferred-data-access">Preferred data access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanics-of-data-transfer">Mechanics of data transfer</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>In certain cases, you may be able to share data you obtained from somebody (“data provider”) with the AEA Data Editor for the purpose of conducting reproducibility checks, without later publishing the data (“privately sharing data”).</p>
+<blockquote>
+<div><p>If you are able to more broadly share sensitive data with any user who can provide, for instance, IRB approval, please see <a class="reference internal" href="creating-separate-data-deposit.html"><span class="doc std std-doc">this other guide on creating a separate data deposit</span></a>.</p>
+</div></blockquote>
+<p>Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Private provision is sometimes the only way the Data Editor can access the data. At other times, it is simply a more expedient or timely way to provide the data. Authors should be clear about describing <strong>both</strong> options when both are available.</p>
+<p>This page describes some tips and methods of doing so, and considerations. Please read it carefully.</p>
+<section id="do-s-and-don-ts">
+<h1>DO’s and DON’Ts<a class="headerlink" href="#do-s-and-don-ts" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Do NOT transfer data that you have no rights to transfer. Always carefully read your data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed.</p></li>
+<li><p>Do NOT upload the restricted-access data to openICPSR.</p></li>
+<li><p>DO structure the repository to take into the account the data that cannot be published. See this <a class="reference external" href="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit.html#structure-in-the-presence-of-confidential-unpublished-data">note</a>.</p></li>
+</ul>
+</section>
+<section id="permissions">
+<h1>Permissions<a class="headerlink" href="#permissions" title="Link to this heading">#</a></h1>
+<p>First and foremost, you must have the rights to <em>privately</em> share data. This will be noted in the data use agreement (DUA), license, or non-disclosure agreement (NDA) that you signed to obtain access to the data from the data provider. In general,</p>
+<ul class="simple">
+<li><p>if you signed an NDA, it is unlikely that you are allowed to automatically share data with others. However, the AEA Data Editor may sign the same or a similar NDA with the data provider. Note that this should always be noted in the <strong>public</strong> README, as this may also apply to any other future replicator.</p></li>
+<li><p>if you signed a DUA, read it carefully, as it may explicitly allow or deny you right to redistribute the data.</p>
+<ul>
+<li><p>In some cases, you may need to explicitly ask your data provider. Some will allow data to be shared privately between subscribers (examples in the past have included S&amp;P and Bureau Van Dijk, but you should ask). The AEA Data Editor may be able to facilitate the conversation.</p></li>
+</ul>
+</li>
+<li><p>if the data you obtained (via download or purchase) had a license attached to it, read it carefully. Common licenses include CC-BY and variants thereof, which allow for redistribution. Others may not.</p></li>
+<li><p>you may have acquired full rights to the data, by collecting it yourself (but careful: participant consent!) or by outright purchasing the data. However, not every purchase gives you full rights to the data! Read your purchase agreement (license).</p></li>
+<li><p>In some cases, data usage rights may apply to your “research group” or your “institution.” It may be possible to temporarily include the AEA Data Editor as a member of your “research group” for the purpose of conducting reproducibility checks. In other cases, rights are automatically granted to anybody within your institution (your agency, company, or university) while at the same time automatically being limited to that same institution.</p></li>
+</ul>
+<p>If your data use agreement, license, or non-disclosure agreement does not seem to allow to share the data with the Data Editor, you can ask your data provider explicitly to allow you to do so, or to share directly with the Data Editor. Sample text:</p>
+<blockquote>
+<div><p>The AEA is conducting a reproducibility check for my manuscript entitled “X.” Would it be possible for you to allow us to provide the restricted-access data to the AEA Data Editor so that he may proceed to verify the reproducibility of the entire replication package? The data would not be published, and would be deleted by the Data Editor once he has completed the process.</p>
+</div></blockquote>
+<p>You can point them to this page for more information.</p>
+</section>
+<section id="documenting-restrictions-and-instructions">
+<h1>Documenting restrictions and instructions<a class="headerlink" href="#documenting-restrictions-and-instructions" title="Link to this heading">#</a></h1>
+<p>Whatever restrictions are imposed on the data typically convey to other replicators as well. All restrictions should be documented in the published README, in the section about “<a class="reference external" href="https://social-science-data-editors.github.io/template_README/template-README.html#data-availability-and-provenance-statements">Data Availability and Provenance Statements</a>.”</p>
+<p>If you filled out an application form, it may be useful to include the filled-out application form with the replication package, or to provide the information needed for a replicator to fill out the application form. The AEA Data Editor may need the same information to acquire data that you cannot share directly.</p>
+</section>
+<section id="signaling-availability">
+<h1>Signaling availability<a class="headerlink" href="#signaling-availability" title="Link to this heading">#</a></h1>
+<p>AEA authors are required to submit a <a class="reference external" href="https://www.aeaweb.org/journals/forms/data-code-availability">Data and Code Availability Form</a>, which has an option to signal the ability to privately provide data to the AEA Data Editor. Please alert the editor as early as possible about this - in most cases, agreements can take a while to put in place. Note that the ability to privately provide the data does not preclude the possibility that others, including the Data Editor, may independently request access to the data from the data provider. Please check all options that apply!</p>
+</section>
+<section id="sharing-data-with-data-editor">
+<h1>Sharing data with Data Editor<a class="headerlink" href="#sharing-data-with-data-editor" title="Link to this heading">#</a></h1>
+<section id="preferred-contractual-arrangement">
+<h2>Preferred contractual arrangement<a class="headerlink" href="#preferred-contractual-arrangement" title="Link to this heading">#</a></h2>
+<p>The AEA Data Editor is an employee of an educational institution, not the AEA itself (see <a class="reference external" href="https://aeadataeditor.github.io/">main page</a> for the current AEA Data Editor’s affiliation). Thus, all access rights are constrained by rules at that educational institution.</p>
+<ul class="simple">
+<li><p>If an NDA needs to be signed, the use of <a class="reference external" href="https://researchservices.cornell.edu/resources/individual-standard-non-disclosure-agreement-nda">Cornell’s Individual Standard Non-Disclosure Agreement</a> (as of 2021) is the most time-efficient. Deviations thereof may need approval by the host institution’s office of sponsored research and may delay signature of the agreement.</p></li>
+<li><p>If the AEA Data Editor needs to request the data from the original data provider independently, you should provide enough information to fill out all required forms.</p></li>
+<li><p>If IRB approval was required for you to access the data, then there are a few considerations to take into account.</p>
+<ul>
+<li><p>In general, the AEA Data Editor does <strong>not</strong> need separate IRB approval, since the work of the AEA Data Editor does not constitute “engagement” (formal involvement in research) because, as described in 45CFR46 (Common Rule) “<em>the services performed do not merit professional recognition or publication privileges</em>” [<a class="reference external" href="https://www.hhs.gov/ohrp/regulations-and-policy/guidance/guidance-on-engagement-of-institutions/index.html">1</a>] (the AEA Data Editor does not publish any of the work they conduct as part of the reproducibility checks)</p></li>
+<li><p>However, in some cases, the data provider may still require formal consideration by the IRB at the AEA Data Editor’s institution. Our IRB (at this time, Cornell University) has agreed to review such requests if necessary.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="preferred-data-access">
+<h2>Preferred data access<a class="headerlink" href="#preferred-data-access" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>If the data do not contain personal identifiers, then in general, transfer is straightforward, but check with your DUA/NDA/IRB approval/exemption.</p></li>
+<li><p>The AEA Data Editor uses IT systems that are university-controlled, with access protected by VPN and individual sign-on, both using 2FA.</p></li>
+<li><p>If the data do require higher security protocols, the AEA Data Editor has access to <a class="reference external" href="https://ciser.cornell.edu/data/secure-data-services/cradc/">high-security remote-access environments at Cornell University</a>, though setting up access may require additional time (and may require approval by Cornell’s Office of Sponsored Research).</p></li>
+</ul>
+</section>
+<section id="mechanics-of-data-transfer">
+<h2>Mechanics of data transfer<a class="headerlink" href="#mechanics-of-data-transfer" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>All data transfers should be compliant with your DUA/NDA.</p></li>
+<li><p>By default, if you have signalled that you can provide data privately, the Data Editor will send you an email containing a link to a secure upload form, where you can provide the data</p></li>
+<li><p>You can share data with the AEA Data Editor using other means, such as your own Dropbox, Google Drive, OneDrive, etc. subscription.</p></li>
+<li><p>If necessary, you can also provide the AEA Data Editor with remote access to your own computing infrastructure (remote login to compute nodes or virtual enclaves).</p></li>
+</ul>
+<p>All of these methods have been successfully used in the past.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="sharing-openicpsr.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Enabling sharing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="step-by-step.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">DO’s and DON’Ts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#permissions">Permissions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-restrictions-and-instructions">Documenting restrictions and instructions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#signaling-availability">Signaling availability</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-data-with-data-editor">Sharing data with Data Editor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preferred-contractual-arrangement">Preferred contractual arrangement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preferred-data-access">Preferred data access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanics-of-data-transfer">Mechanics of data transfer</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Social Science Data Editors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
