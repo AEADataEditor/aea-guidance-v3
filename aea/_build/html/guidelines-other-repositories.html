@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Why deposit at a different repository &#8212; AEA Guidance</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'guidelines-other-repositories';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="index.html" />
+    <link rel="prev" title="Citing, DOI" href="faq.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">AEA Guidance</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Licensing_guidance.html">Some guidance on licensing of databases and software:</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="creating-restricted-data-deposit-icpsr.html">Preliminaries</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="creating-separate-data-deposit.html">Who should read this</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="data-deposit-aea.html">Tutorial</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Citing, DOI</a></li>
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Why deposit at a different repository</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Unofficial guidance on various topics by the AEA Data Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparing-for-data-deposit.html">Key principle: Computational empathy</a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="protocol-3rd-party-replication.html">Protocol for Third-party Verifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replication-comment.html">Provide a strong link to the original replication package</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="reproducibility-checks.html">Generic guidance</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="sample-report-3rd-1.html">Code Verification - Restricted Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample-report.html">README file</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="sharing-openicpsr.html">Enabling sharing</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="sharing-restricted-data.html">DO’s and DON’Ts</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="template-ipums-api-beta.html">Template to be sent to a author for IPUMS-USA API trial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="third-party-request.html">Template to be sent to a third-party replication service</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fguidelines-other-repositories.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/guidelines-other-repositories.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Why deposit at a different repository</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Why deposit at a different repository</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#title">Title</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#readme">README</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-abstract">Summary / Abstract</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-fields-metadata">Additional fields / metadata</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#zip-files">ZIP files</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-and-downloading-large-quantities-of-files">Uploading and downloading large quantities of files</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-repository-specific-guidance">Additional repository-specific guidance</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zenodo">Zenodo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codeocean">Codeocean</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-saving-and-sharing">Publishing, saving, and sharing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#after-publication-of-the-manuscript">After publication of the manuscript</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-manuscript-doi-to-codeocean-capsule">Adding manuscript DOI to CodeOcean capsule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-manuscript-doi-to-other-openicpsr-repositories">Adding manuscript DOI to other openICPSR repositories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-related-manuscript-to-dataverse">Adding related manuscript to Dataverse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-related-manuscript-to-zenodo">Adding related manuscript to Zenodo</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#special-notes">Special notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-a-pre-existing-deposit">Updating a Pre-Existing Deposit</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Zenodo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Codeocean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataverse">Dataverse</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>The AEA accepts replication packages from any <strong>trusted</strong> repository (see <a class="reference external" href="https://social-science-data-editors.github.io/guidance/Requested_information_hosting.html#trusted-repositories">list</a>), as long as they meet certain display criteria, and otherwise satisfy the reproducibility criteria as per the AEA Data and Code Availability Policy. The default trusted repository is the <a class="reference external" href="https://www.openicpsr.org/openicpsr/search/aea/studies">AEA Data and Code Repository</a>. If you have doubts about whether a particular repository qualifies as a “trusted” repository, contact the AEA Data Editor before unnecessarily duplicating the deposit.</p>
+<p>If depositing at other trusted repositories, please follow these guidelines.</p>
+<section id="why-deposit-at-a-different-repository">
+<h1>Why deposit at a different repository<a class="headerlink" href="#why-deposit-at-a-different-repository" title="Link to this heading">#</a></h1>
+<p>There are two main reasons why authors may want to deposit at a different repository:</p>
+<ul class="simple">
+<li><p>They may have already created a deposit (for instance, when releasing a working paper). Deposits should remain where they are, reducing duplication and ambiguity (but see below for changes that may need to be made).</p>
+<ul>
+<li><p>Some institutions or research labs habitually create deposits. Example: <a class="reference external" href="https://dataverse.harvard.edu/dataverse/jpal">J-PAL’s Dataverse</a></p></li>
+<li><p>The <a class="reference external" href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Zenodo-Github</a> integration may have been used; see notes about <a class="reference internal" href="#title"><span class="xref myst">Title</span></a>, below.</p></li>
+</ul>
+</li>
+<li><p>Certain repositories may have additional features that are not available on the AEA’s repository at openICPSR.</p>
+<ul>
+<li><p>As of 2022, openICPSR struggles with data deposits that have more than 1,000 files or more than 30GB of content.</p></li>
+<li><p>Harvard Dataverse offers up to <strong>1TB</strong> for free. An <strong>API</strong> is available.</p></li>
+<li><p>Zenodo offers <strong>50GB</strong> per default, but can easily be expanded to more than <strong>200GB</strong> upon request. An API to download individual files is available.</p></li>
+<li><p>Codeocean offers 2GB per capsule, but allows for easy in-the-cloud computing, i.e., replicators can immediately <a class="reference external" href="https://help.codeocean.com/en/articles/1217599-duplicating-a-compute-capsule?q=export">duplicate a capsule</a> and start running it.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="title">
+<h1>Title<a class="headerlink" href="#title" title="Link to this heading">#</a></h1>
+<p>The <strong>title</strong> should clearly distinguish paper and replication package.</p>
+<ul class="simple">
+<li><p>The AEA requires “<code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">and</span> <span class="pre">Code</span> <span class="pre">for:</span> <span class="pre">TITLE</span> <span class="pre">OF</span> <span class="pre">PAPER</span></code>” when both data and code are part of the replication package, with variants for data-only, code-only, and additional data packages (”<code class="docutils literal notranslate"><span class="pre">supplemental</span> <span class="pre">data</span></code>”) that may be created to allow for different licensing (for instance, see <a class="reference internal" href="creating-separate-data-deposit.html"><span class="doc std std-doc">this guide on creating a separate data deposit</span></a>)</p></li>
+<li><p>Other repositories may offer to automatically prefix the paper title with “<code class="docutils literal notranslate"><span class="pre">Replication</span> <span class="pre">package</span> <span class="pre">for:</span> <span class="pre">TITLE</span> <span class="pre">OF</span> <span class="pre">PAPER</span></code>”. That is acceptable, but not preferred, as it obfuscates what the deposit actually contains.</p></li>
+<li><p>Simply repeating the title of the paper is not acceptable.</p></li>
+<li><p>Prefixing the title of the paper with “<code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">for:</span></code>” when the replication package actually contains code is not acceptable.</p></li>
+<li><p>Users of the Zenodo-Github integration may want to use the [CITATION.cff] file in their Github repository, see <a class="reference external" href="https://citation-file-format.github.io/">citation-file-format.github.io/</a>, <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">Github documentation</a>, and the <a class="reference external" href="https://citation-file-format.github.io/cff-initializer-javascript/">Citation File generator</a></p></li>
+</ul>
+</section>
+<section id="readme">
+<h1>README<a class="headerlink" href="#readme" title="Link to this heading">#</a></h1>
+<p>The <strong>README</strong> must conform to the  <a class="reference external" href="https://social-science-data-editors.github.io/template_README/">template README for social science replication packages</a> if the deposit is for a full replication package. If the deposit is for data-only, a simplified README is acceptable, but should</p>
+<ul class="simple">
+<li><p>describe salient characteristics of the data,</p></li>
+<li><p>the source of the data</p></li>
+<li><p>license information</p></li>
+</ul>
+<p>The README must be present in PDF format (other additional formats are acceptable). The README should be able to be viewed and/or downloaded independently from the rest of the deposit, i.e., it should not be part of a single ZIP file.</p>
+<blockquote>
+<div><p>If the platform allows, select the README as the default file to display.</p>
+</div></blockquote>
+</section>
+<section id="summary-abstract">
+<h1>Summary / Abstract<a class="headerlink" href="#summary-abstract" title="Link to this heading">#</a></h1>
+<p>The summary should be short, but informative. It can include the abstract of the article itself. It should not include information on the related article (which has its own field).</p>
+</section>
+<section id="additional-fields-metadata">
+<h1>Additional fields / metadata<a class="headerlink" href="#additional-fields-metadata" title="Link to this heading">#</a></h1>
+<p>Some repositories have the ability to provide related articles (most) or other related information.</p>
+<p>Authors will need to return to these sites to update these fields with</p>
+<ul class="simple">
+<li><p>the DOI of the published manuscript</p></li>
+<li><p>the DOI of any related deposits</p></li>
+</ul>
+<p>This ensures that the information is findable in both directions, not just from the article to the data and code.</p>
+<blockquote>
+<div><p>NOTE: In any repository other than the AEA’s openICPSR repository, this action must be undertaken by the <strong>author</strong>, <strong>after</strong> the publication of the article. It cannot be done by AEA staff.</p>
+</div></blockquote>
+</section>
+<section id="zip-files">
+<h1>ZIP files<a class="headerlink" href="#zip-files" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>if possible, expand all ZIP files, so that individual files can be downloaded, while preserving directory structure (may not be possible on all platforms)</p></li>
+<li><p>under no circumstances should it be necessary to download a (possibly very large) ZIP file to read the README. The README should be available as a separate file.</p></li>
+<li><p>if ZIP files must be used, the visual display of the trusted repository should allow to inspect ZIP files</p>
+<ul>
+<li><p>for instance, the filenames in a ZIP file can be viewed on Zenodo, but are not browsable on Dataverse or ICPSR.</p></li>
+<li><p>when ZIP files cannot be inspected before downloading, the deposit must be amended to “expand” the ZIP file. Exceptions to this rule should be requested from the AEA Data Editor.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Link to this heading">#</a></h1>
+<p>The <strong>contents</strong> of the deposit must, of course, satisfy all other requirements for AEA replication packages.</p>
+<section id="uploading-and-downloading-large-quantities-of-files">
+<h2>Uploading and downloading large quantities of files<a class="headerlink" href="#uploading-and-downloading-large-quantities-of-files" title="Link to this heading">#</a></h2>
+<p>Some repositories allow for the upload of files via API or import from online services. This may be useful for particularly large data deposits.</p>
+<ul class="simple">
+<li><p>Zenodo: See <a class="reference external" href="https://developers.zenodo.org/">documentation for the Zenodo legacy API</a>. An example for a simple uploader in Python is on the <a class="reference external" href="https://github.com/AEADataEditor/Upload-to-Zenodo">AEA Github repository</a>.</p></li>
+<li><p>Zenodo: The legacy API can also be used to download individual files from Zenodo. The <a class="reference external" href="https://pypi.org/project/zenodo-get/">zenodo_get</a> (<a class="reference external" href="https://github.com/dvolgyes/zenodo_get">Github source</a>) Python package allows to download entire packages.</p></li>
+</ul>
+<blockquote>
+<div><p>Zenodo: The legacy API is being deprecated. Once newer guidance and tools are available, we will update this page. For now, Zenodo points to <a class="reference external" href="https://inveniordm.docs.cern.ch/reference/rest_api_index/">InvenioRDM</a> for API guidance (2023)</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Dataverse: See <a class="reference external" href="https://guides.dataverse.org/en/5.12/api/index.html">documentation for Dataverse API</a>. A R package <a class="reference external" href="https://github.com/IQSS/dataverse-client-r"><code class="docutils literal notranslate"><span class="pre">dataverse-client-r</span></code></a> can download individual files or complete packages. <a class="reference external" href="https://pydataverse.readthedocs.io/en/latest/">pyDataverse</a> is Python code  to interface with Dataverses.</p></li>
+</ul>
+</section>
+</section>
+<section id="additional-repository-specific-guidance">
+<h1>Additional repository-specific guidance<a class="headerlink" href="#additional-repository-specific-guidance" title="Link to this heading">#</a></h1>
+<section id="zenodo">
+<h2>Zenodo<a class="headerlink" href="#zenodo" title="Link to this heading">#</a></h2>
+<p>The AEA has a “community” on Zenodo: <a class="reference external" href="https://zenodo.org/communities/aeajournals">https://zenodo.org/communities/aeajournals</a></p>
+<p>On Zenodo, you should use the “Submit for review” functionality if you do not already have a public deposit:</p>
+<ul class="simple">
+<li><p>Only draft deposits can be submitted for review</p></li>
+<li><p>Both the uploader (you) and the curator (the AEA Data Editor) can modify metadata and files</p></li>
+</ul>
+<blockquote>
+<div><p>Zenodo <a class="reference external" href="https://help.zenodo.org/docs/deposit/create-new-upload/">Create new upload</a>, but do NOT publish!</p>
+<ul class="simple">
+<li><p>We strongly suggest not uploading a ZIP file, unless you need to preserve folder structure.</p></li>
+<li><p>The README must be individually uploaded and <a class="reference external" href="https://help.zenodo.org/docs/deposit/manage-files/#preview">selected as the file to display</a>.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>Zenodo <a class="reference external" href="https://help.zenodo.org/docs/share/submit-for-review/">Submit for Review</a></p>
+</div></blockquote>
+<p>If you already have a published deposit, you can “Submit to community”.</p>
+<ul class="simple">
+<li><p>Only published deposits can be submitted for inclusion in a community</p></li>
+<li><p>Only metadata can be edited (any revision to files can only be handled by creating a new version)</p></li>
+</ul>
+<blockquote>
+<div><p>Zenodo <a class="reference external" href="https://help.zenodo.org/docs/share/submit-to-community/">Submit to community for inclusion</a></p>
+</div></blockquote>
+</section>
+<section id="codeocean">
+<h2>Codeocean<a class="headerlink" href="#codeocean" title="Link to this heading">#</a></h2>
+<p>If you can publish your data freely, and the data is less than 2GB, you can construct your entire replication package on CodeOcean. If on the other hand your replication package requires future replicators to download data, then you will not be able to use Codeocean.</p>
+<p>You can deduce the presumptive DOI on Codeocean from the capsule number, visible in the address bar of your browser, e.g.,</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">https://codeocean.com/capsule/1234567/tree</span></code></p>
+</div></blockquote>
+<p>You can compute the DOI in the following way:</p>
+<p>{% include deposit-doi-codeocean.html %}</p>
+</section>
+</section>
+<section id="publishing-saving-and-sharing">
+<h1>Publishing, saving, and sharing<a class="headerlink" href="#publishing-saving-and-sharing" title="Link to this heading">#</a></h1>
+<p>Some repositories offer the ability to share the contents of the deposit prior to publishing it. Authors are encouraged to avail themselves of this opportunity.</p>
+<p>Otherwise, authors must publish the repository, and communicate the DOI to the AEA Data Editor as part of the <a class="reference external" href="https://www.aeaweb.org/journals/forms/data-code-availability">Data and Code Availability Form</a>.</p>
+<ul class="simple">
+<li><p>Zenodo: see <a class="reference external" href="https://help.zenodo.org/docs/share/link-sharing/">link sharing</a> or <a class="reference external" href="https://help.zenodo.org/docs/share/submit-for-review/">submit for review</a></p></li>
+<li><p>Dataverse: See <a class="reference external" href="https://guides.dataverse.org/en/5.12/user/dataset-management.html#">Private URL to Review Unpublished Dataset</a></p></li>
+<li><p>Codeocean: Invite the AEA Data Editor as a <a class="reference external" href="https://help.codeocean.com/en/articles/1052886-sharing-capsules">collaborator to the capsule</a>.</p></li>
+</ul>
+</section>
+<section id="after-publication-of-the-manuscript">
+<h1>After publication of the manuscript<a class="headerlink" href="#after-publication-of-the-manuscript" title="Link to this heading">#</a></h1>
+<p>Once the AEA has published your manuscript, the manuscript DOI will be locked in place. At this time, there is one final small step that needs to be done: The author should     adjust the “backlink” to the published manuscript (the link pointing from the deposit to the manuscript). While the AEA publication staff handle the “forward link” (from the manuscript to the replication package), and handle the backlink for any deposit in the AEA Data and Code Repository, they are unable to do so for any other trusted repository (including PSID and similar non-AEA repositories at ICPSR).</p>
+<p>Here are some guidelines on how to do that update:</p>
+<section id="adding-manuscript-doi-to-codeocean-capsule">
+<h2>Adding manuscript DOI to CodeOcean capsule<a class="headerlink" href="#adding-manuscript-doi-to-codeocean-capsule" title="Link to this heading">#</a></h2>
+<p>Authors will need to email Codeocean support, providing them with the capsule number and the DOI to be linked from the capsule. Support will update the capsule metadata.</p>
+<p>Normally, this should not generate a new version (<code class="docutils literal notranslate"><span class="pre">V2</span></code>), but rather, a <code class="docutils literal notranslate"><span class="pre">V1.1</span></code>. The DOI of the deposit should not change.</p>
+<p><img alt="Updated CodeOcean after adding manuscript DOI" src="images/codeocean-update-link-doi.png" /></p>
+</section>
+<section id="adding-manuscript-doi-to-other-openicpsr-repositories">
+<h2>Adding manuscript DOI to other openICPSR repositories<a class="headerlink" href="#adding-manuscript-doi-to-other-openicpsr-repositories" title="Link to this heading">#</a></h2>
+<p>Authors will need to edit the metadata under the “Related Publications” heading:</p>
+<ul class="simple">
+<li><p>Log in to openICPSR</p></li>
+<li><p>Navigate to your deposits, and select the right one.</p></li>
+<li><p>Do NOT create a new version!</p></li>
+<li><p>Scroll down to the “Related publications” section.</p></li>
+</ul>
+<p><img alt="related publications" src="images/openicpsr-metadata-related-publications.png" /></p>
+<ul class="simple">
+<li><p>In the modal, select “<code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">via</span> <span class="pre">DOI</span></code>”:</p></li>
+</ul>
+<p><img alt="import via DOI" src="images/project-related-icpsr-modal1.png" /></p>
+<ul class="simple">
+<li><p>Enter the DOI as per instructions</p></li>
+</ul>
+<p><img alt="enter the DOI" src="images/project-related-icpsr-modal2.png" /></p>
+<ul class="simple">
+<li><p>From the relationship dropdown, select “<code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">supplemented</span> <span class="pre">by</span></code>”:</p></li>
+</ul>
+<p><img alt="Select relationship" src="images/project-related-icpsr-modal3.png" /></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">and</span> <span class="pre">Apply</span></code>. The change will take effect immediately, there is no need to go through the publication process.</p></li>
+</ul>
+</section>
+<section id="adding-related-manuscript-to-dataverse">
+<h2>Adding related manuscript to Dataverse<a class="headerlink" href="#adding-related-manuscript-to-dataverse" title="Link to this heading">#</a></h2>
+<p>This should be applicable to any Dataverse instance.</p>
+<ul class="simple">
+<li><p>Log in to your Dataverse account</p></li>
+<li><p>Under profile name, click on “<code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Data</span></code>”, wait for information to load</p></li>
+<li><p>Then click on the correct dataset / code / replication package</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Data</span> <span class="pre">&gt;</span> <span class="pre">Metadata</span></code></p></li>
+<li><p>scroll down to “<code class="docutils literal notranslate"><span class="pre">Related</span> <span class="pre">publication</span></code>”</p></li>
+<li><p>choose DOI under “<code class="docutils literal notranslate"><span class="pre">Identifier</span> <span class="pre">Type</span></code>”</p></li>
+<li><p>paste the DOI provided</p></li>
+<li><p>You may need to remove an older (obsolete) entry</p></li>
+<li><p>Save and then don’t forget to publish</p></li>
+</ul>
+<blockquote>
+<div><p>Contributed by Charlotte Cavaillé.</p>
+</div></blockquote>
+</section>
+<section id="adding-related-manuscript-to-zenodo">
+<h2>Adding related manuscript to Zenodo<a class="headerlink" href="#adding-related-manuscript-to-zenodo" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>See <a class="reference external" href="https://help.zenodo.org/docs/deposit/manage-records/#edit">Edit published records</a> for details on how to edit the metadata of a deposit (a “record”)</p></li>
+<li><p>Go to <a class="reference external" href="https://zenodo.org/me/uploads">My Uploads</a> and find the record.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Edit</span></code></p></li>
+<li><p>Scroll down to <code class="docutils literal notranslate"><span class="pre">Related</span> <span class="pre">works</span></code></p></li>
+<li><p>Choose “<code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">related</span> <span class="pre">work</span></code>”</p></li>
+<li><p>Then</p>
+<ul>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">supplement</span> <span class="pre">to</span></code> as <code class="docutils literal notranslate"><span class="pre">Relation</span></code>.</p></li>
+<li><p>Enter the DOI of the published article into the field <code class="docutils literal notranslate"><span class="pre">Identifier</span></code></p></li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">DOI</span></code> as <code class="docutils literal notranslate"><span class="pre">Scheme</span></code></p></li>
+<li><p>Choose “Publication/Journal article” as <code class="docutils literal notranslate"><span class="pre">Resource</span> <span class="pre">type</span></code></p></li>
+</ul>
+</li>
+<li><p>Optionally choose <code class="docutils literal notranslate"><span class="pre">Preview</span></code>, then <code class="docutils literal notranslate"><span class="pre">Publish</span></code>.</p></li>
+</ul>
+<p>This does NOT create a new version. Do not change any files.</p>
+</section>
+</section>
+<section id="special-notes">
+<h1>Special notes<a class="headerlink" href="#special-notes" title="Link to this heading">#</a></h1>
+<p>None at present.</p>
+</section>
+<section id="updating-a-pre-existing-deposit">
+<h1>Updating a Pre-Existing Deposit<a class="headerlink" href="#updating-a-pre-existing-deposit" title="Link to this heading">#</a></h1>
+<p>If your pre-existing deposit does not satisfy all of these rules, you can generally create a new version of the existing deposit. Such a new version is preferable to depositing at the AEA repository, but is your choice. In some cases, a new DOI is assigned (e.g., Zenodo or ICPSR), and you must communicate the DOI of the updated deposit to the AEA Data Editor in a timely fashion.</p>
+<blockquote>
+<div><p>NOTE: Unless the chosen repository can be shared prior to publication (Dataverse), all such changes are public and visible to others.</p>
+</div></blockquote>
+</section>
+<section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>Zenodo<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Good examples can be found in the <a class="reference external" href="https://zenodo.org/communities/aeajournals/">AEA Journal Community</a>, for instance:</p>
+<ul class="simple">
+<li><p>U.S. Geological Survey, &amp; Brooks, Leah. (2022). USGS National Map 3DEP 1 Arc-second Digital Elevation Models (DEMs): Full Coverage for U.S. Interstate Highway System [Data set]. Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.5830968">https://doi.org/10.5281/zenodo.5830968</a> (83GB)</p></li>
+<li><p>Ministerio de Desarrollo Productivo Argentina, Daruich, Diego, Kozlowski, Julian, &amp; Vilhuber, Lars. (2022). Precios Claros (2016-05 - 2018-03) [Data set]. In American Economic Journal: Macroeconomics. Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.6568295">https://doi.org/10.5281/zenodo.6568295</a> (44GB, about 1,200 files)</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>Codeocean<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Some examples of replication packages on CodeOcean are:</p>
+<ul class="simple">
+<li><p>Ryan Chahrour, Robert Ulbricht (2022) Compute Capsule for: Robust Predictions for DSGE Models with Incomplete Information [Source Code]. <a class="reference external" href="https://doi.org/10.24433/CO.5177698.v1">https://doi.org/10.24433/CO.5177698.v1</a></p></li>
+<li><p>Mónica García-Pérez, José Fernandez, Sandra Orozco-Aleman (2024) Compute Capsule for: Unraveling the Hispanic Health Paradox [Source Code]. <a class="reference external" href="https://doi.org/10.24433/CO.7234900.v1">https://doi.org/10.24433/CO.7234900.v1</a></p></li>
+</ul>
+</section>
+<section id="dataverse">
+<h2>Dataverse<a class="headerlink" href="#dataverse" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Cavaillé, Charlotte, 2022, “Replication Code for “Immigration and Support for Redistribution: Lessons from Europe””, <a class="reference external" href="https://doi.org/10.7910/DVN/6WTDRH">https://doi.org/10.7910/DVN/6WTDRH</a>, Harvard Dataverse, V3</p></li>
+</ul>
+</section>
+</section>
+<section id="note">
+<h1>Note<a class="headerlink" href="#note" title="Link to this heading">#</a></h1>
+<p>These rules may be amended from time to time.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="faq.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Citing, DOI</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Why deposit at a different repository</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#title">Title</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#readme">README</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-abstract">Summary / Abstract</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-fields-metadata">Additional fields / metadata</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#zip-files">ZIP files</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-and-downloading-large-quantities-of-files">Uploading and downloading large quantities of files</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-repository-specific-guidance">Additional repository-specific guidance</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zenodo">Zenodo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codeocean">Codeocean</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-saving-and-sharing">Publishing, saving, and sharing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#after-publication-of-the-manuscript">After publication of the manuscript</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-manuscript-doi-to-codeocean-capsule">Adding manuscript DOI to CodeOcean capsule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-manuscript-doi-to-other-openicpsr-repositories">Adding manuscript DOI to other openICPSR repositories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-related-manuscript-to-dataverse">Adding related manuscript to Dataverse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-related-manuscript-to-zenodo">Adding related manuscript to Zenodo</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#special-notes">Special notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-a-pre-existing-deposit">Updating a Pre-Existing Deposit</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Zenodo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Codeocean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataverse">Dataverse</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Social Science Data Editors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

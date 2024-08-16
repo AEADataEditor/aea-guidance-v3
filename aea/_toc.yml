@@ -1,0 +1,35 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: 2021-01-05-Answers-to-questions
+- file: LICENSE-template
+- file: Licensing_guidance
+- file: _faq
+- file: addtl-data-citation-guidance
+- file: creating-restricted-data-deposit-icpsr
+- file: creating-separate-data-deposit
+- file: data-deposit-aea-guidance
+- file: data-deposit-aea
+- file: disclaimer
+- file: faq
+- file: guidelines-other-repositories
+- file: index
+- file: next
+- file: overview
+- file: preparing-for-data-deposit
+- file: protocol-3rd-party-replication
+- file: replication-comment
+- file: reproducibility-checks
+- file: sample-language-report
+- file: sample-report-3rd-1
+- file: sample-report
+- file: sharing-openicpsr
+- file: sharing-restricted-data
+- file: step-by-step
+- file: template-ipums-api-beta
+- file: template_inquiry_about_DOI_by_editor
+- file: third-party-request
+- file: using_codeocean
